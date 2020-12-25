@@ -1,0 +1,15 @@
+@use "../utils/mixins";
+
+.carousel {
+    overflow: hidden;
+    flex-shrink: 1;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    @include mixins.transition(background-color);
+    width: 5%;
+
+    &:hover, &:active {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}

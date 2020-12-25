@@ -1,0 +1,121 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.contact-page {
+    @include mixins.flex(column, flex-start, center);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.25);
+    flex-grow: 1;
+    padding-top: 3rem;
+
+    .contact-container {
+        @include mixins.flex(column, center, center);
+
+        h1 {
+            color: variables.$link-active;
+            width: 100%;
+            text-align: center;
+            font-size: 3rem;
+            padding: 0rem 10rem 1rem;
+            border-bottom: 1px solid variables.$main-border;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 5rem;
+        }
+
+        .contact-content {
+            @include mixins.flex(row, center, flex-start);
+
+            .contact-form {
+                margin-right: 6rem;
+
+                form {
+                    @include mixins.flex(column, flex-start, stretch);
+                    min-width: 30rem;
+                    width: 100%;
+
+                    > * + * {
+                        margin-top: 1rem;
+                    }
+
+                    div {
+                        @include mixins.flex();
+
+                        input {
+                            width: calc(50%);
+                            
+                            + input {
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                    
+                    input, textarea {
+                        font: inherit;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: variables.$text-color;
+                        outline: none;
+                        padding: 0.5rem;
+                        border: 1px solid variables.$main-border;
+                        border-radius: 3px;
+                    }
+
+                    textarea {
+                        resize: none;
+                        height: 10rem;
+                    }
+
+                    button {
+                        @include mixins.transition(color, background-color, border-color);
+                        cursor: pointer;
+                        color: variables.$link-active;
+                        font-weight: bold;
+                        background-color: transparent;
+                        align-self: center;
+                        outline: none;
+                        padding: 0.75rem 5rem;
+                        border: 1px solid variables.$main-border;
+                        border-radius: 3px;
+                        margin-top: 2rem;
+
+                        &:hover, &:active {
+                            color: black;
+                            border-color: variables.$link-active;
+                            background-color: variables.$link-active;
+                        }
+                    }
+                }
+            }
+
+            .contact-info {
+                @include mixins.flex(column, center, stretch);
+                text-align: center;
+                margin-left: 6rem;
+
+                span {
+                    @include mixins.flex();
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        left: -3rem;
+                    }
+
+                    + span {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

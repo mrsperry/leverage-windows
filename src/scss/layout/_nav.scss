@@ -1,0 +1,19 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+nav {
+    @include mixins.flex(row, space-between);
+    padding: 1rem 3rem;
+
+    img {
+        max-height: 3rem;
+    }
+
+    ul {
+        @include mixins.flex();
+
+        li + li {
+            margin-left: 2rem;
+        }
+    }
+}

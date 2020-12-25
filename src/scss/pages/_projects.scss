@@ -1,0 +1,106 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.projects {
+    @include mixins.flex(row, center, flex-start);
+    background-color: rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 2rem;
+
+    figure {
+        position: relative;
+        overflow: hidden;
+        margin: 0.5rem;
+
+        img {
+            display: block;
+            width: 500px;
+            height: 300px;
+        }
+
+        figcaption {
+            @include mixins.flex(column, flex-start, flex-start);
+            @include mixins.transition(transform);
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.85);
+            box-sizing: border-box;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+
+            .title {
+                color: variables.$link-active;
+                font-weight: bold;
+            }
+
+            .type {
+                color: variables.$text-color;
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
+
+.project-page {
+    @include mixins.flex();
+    background-color: rgba(0, 0, 0, 0.25);
+    flex-grow: 1;
+
+    .project-container {
+        @include mixins.flex(column, center, flex-start);
+        max-width: 60%;
+        padding-left: 2rem;
+        border-left: 2px solid variables.$text-color;
+        margin: 0 auto;
+
+        h1 {
+            position: relative;
+            color: variables.$link-active;
+            font-size: 1.75rem;
+            padding: 0 0 0.25rem;
+            border-bottom: 2px solid variables.$text-color;
+            margin-bottom: 1rem;
+
+            &:before {
+                position: absolute;
+                content: "";
+                bottom: -2px;
+                left: -4.25rem;
+                width: 4.25rem;
+                border-bottom: 2px solid variables.$text-color;
+            }
+
+            span {
+                color: variables.$text-color;
+                font-size: 0.85rem;
+                margin-left: 1rem;
+            }
+        }
+        
+        .carousel {
+            overflow: visible;
+            margin-bottom: 5rem;
+    
+            .carousel-indicators {
+                bottom: -7.5rem;
+    
+                li, li.active {
+                    position: relative;
+                    width: 100px;
+                    height: 70px;
+                    margin: 10px;
+                }
+    
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;   
+                }
+            }
+        }
+    }
+}

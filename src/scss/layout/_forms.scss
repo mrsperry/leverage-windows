@@ -1,0 +1,5 @@
+@use "../utils/mixins";
+
+form {
+    @include mixins.flex(column);
+}

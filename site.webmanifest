@@ -1,0 +1,19 @@
+{
+    "name": "Leverage Windows",
+    "short_name": "Leverage",
+    "icons": [
+        {
+            "src": "src/assets/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "src/assets/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#DCDCDC",
+    "background_color": "#0b0e13",
+    "display": "standalone"
+}

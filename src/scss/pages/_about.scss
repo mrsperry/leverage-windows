@@ -1,0 +1,121 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.about {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.25);
+
+    section {
+        max-width: 1400px;
+        margin: auto;
+
+        &.info {
+            @include mixins.flex(row, flex-start, flex-end);
+            padding-bottom: 2rem;
+            border-bottom: 1px solid variables.$main-border;
+            margin-top: 2rem;
+
+            .contact-info {
+                @include mixins.flex(column, center, stretch);
+                text-align: center;
+                margin-left: 8rem;
+
+                span {
+                    @include mixins.flex();
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        left: -3rem;
+                    }
+
+                    + span {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+
+        &.profiles {
+            @include mixins.flex();
+            margin-top: 4rem;
+
+            figure {
+                margin: 0 2rem;
+        
+                img {
+                    border-radius: 50%;
+                    max-width: 18rem;
+                    max-height: 18rem;
+                }
+        
+                figcaption {
+                    @include mixins.flex(column);
+                    margin-top: 1rem;
+        
+                    .name {
+                        color: variables.$link-active;
+                    }
+            
+                    .title {
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+
+        &.brands {
+            margin: 8rem auto;
+
+            h1 {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            div {
+                @include mixins.flex();
+                flex-wrap: wrap;
+            }
+
+            figure {
+                position: relative;
+                overflow: hidden;
+                margin: 0.5rem;
+
+                &:hover, &:active {
+                    figcaption {
+                        transform: translateY(0%);
+                    }
+                }
+
+                img {
+                    display: block;
+                    max-width: 250px;
+                }
+
+                figcaption {
+                    @include mixins.transition(transform);
+                    position: absolute;
+                    color: variables.$text-color;
+                    text-align: center;
+                    transform: translateY(100%);
+                    background-color: rgba(0, 0, 0, 0.85);
+                    box-sizing: border-box;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+
+    h1 {
+        color: variables.$link-active;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin-top: 1.5rem;
+    }
+}

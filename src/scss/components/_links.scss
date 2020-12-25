@@ -1,0 +1,16 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+a {
+    @include mixins.transition(all);
+    transition-property: color;
+
+    &:hover, &:active, &.active {
+        color: variables.$link-active;
+    }
+
+    &.active {
+        cursor: default;
+        font-weight: bold;
+    }
+}

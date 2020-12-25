@@ -1,0 +1,7 @@
+@use "../utils/variables";
+
+:root, body {
+    font-family: "Segoe UI";
+    font-size: 16px;
+    color: variables.$text-color;
+}
