@@ -23,6 +23,7 @@
                 span {
                     @include mixins.flex();
                     position: relative;
+                    white-space: nowrap;
 
                     i {
                         position: absolute;
