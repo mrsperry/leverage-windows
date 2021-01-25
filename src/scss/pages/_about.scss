@@ -38,10 +38,11 @@
 
         &.profiles {
             @include mixins.flex();
-            margin-top: 4rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
 
             figure {
-                margin: 0 2rem;
+                margin: 1rem;
         
                 img {
                     border-radius: 50%;
