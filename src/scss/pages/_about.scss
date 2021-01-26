@@ -74,9 +74,13 @@
                 margin-bottom: 1rem;
             }
 
-            div {
+            > div {
                 @include mixins.flex();
                 flex-wrap: wrap;
+            }
+
+            a {
+                cursor: pointer;
             }
 
             figure {
