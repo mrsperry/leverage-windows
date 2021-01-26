@@ -5,11 +5,11 @@
             .children("figure")
             .children("div")
             .remove()
-            .text();
+            .html();
         $(clone)
             .children("figure")
             .children("figcaption")
-            .text(description);
+            .html(description);
 
         $(brand)
             .removeAttr("href")
