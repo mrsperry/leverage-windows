@@ -50,7 +50,6 @@
 
     .project-container {
         @include mixins.flex(column, center, flex-start);
-        max-width: 60%;
         padding-left: 2rem;
         border-left: 2px solid variables.$text-color;
         margin: 0 auto;
@@ -80,12 +79,15 @@
         }
         
         .carousel {
-            overflow: visible;
-            margin-bottom: 5rem;
-    
+            .carousel-inner {
+                max-width: 1020px;
+                max-height: 659px;
+            }
+
             .carousel-indicators {
-                bottom: -7.5rem;
-    
+                position: static;
+                margin-bottom: 0;
+
                 li, li.active {
                     position: relative;
                     width: 100px;
