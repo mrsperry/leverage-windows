@@ -92,7 +92,15 @@
                     position: relative;
                     width: 100px;
                     height: 70px;
-                    margin: 10px;
+                }
+
+                li {
+                    border: none;
+                    margin: 0;
+
+                    + li {
+                        margin-left: 10px;
+                    }
                 }
     
                 img {
