@@ -38,9 +38,16 @@
         }
 
         &.profiles {
-            @include mixins.flex();
-            flex-wrap: wrap;
-            margin-top: 2rem;
+            div {
+                @include mixins.flex();
+                flex-wrap: wrap;
+                margin-top: 2rem;
+
+                &.employees img {
+                    max-width: 15rem;
+                    max-height: 15rem;
+                }
+            }
 
             figure {
                 margin: 1rem;
