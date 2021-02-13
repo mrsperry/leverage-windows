@@ -24,6 +24,35 @@
         border-radius: 0.5rem;
         max-width: 50%;
 
+        &.profile {
+            figure {
+                flex-direction: row;
+            }
+
+            img {
+                max-width: 20rem;
+                max-height: 20rem;
+                margin-right: 2rem;
+            }
+
+            figcaption {
+                @include mixins.flex(column);
+
+                .name {
+                    font-weight: bold;
+                    font-size: 1.15rem;
+                }
+
+                .title {
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    text-align: left;
+                }
+            }
+        }
+
         button {
             @include mixins.flex();
             @include mixins.transition(color, background-color);
@@ -50,7 +79,7 @@
 
         figure {
             @include mixins.flex(column);
-            padding: 1rem;
+            padding: 2rem;
         }
 
         img {

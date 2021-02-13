@@ -53,6 +53,8 @@
                 margin: 1rem;
         
                 img {
+                    @include mixins.transition(box-shadow);
+                    cursor: pointer;
                     border-radius: 50%;
                     max-width: 18rem;
                     max-height: 18rem;
@@ -61,13 +63,14 @@
                 figcaption {
                     @include mixins.flex(column);
                     margin-top: 1rem;
-        
-                    .name {
-                        color: variables.$link-active;
-                    }
             
                     .title {
                         font-size: 0.85rem;
+                    }
+
+                    a {
+                        color: variables.$link-active;
+                        cursor: pointer;
                     }
                 }
             }

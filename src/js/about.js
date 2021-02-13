@@ -1,4 +1,33 @@
 (() => {
+    for (const profile of $(".profiles div figure")) {
+        const clone = profile.cloneNode(true);
+        $(clone)
+            .children("img")
+            .removeAttr("role");
+
+        const caption = $(clone).children("figcaption");
+        $(caption)
+            .children(".hidden")
+            .removeClass("hidden");
+
+        const name = $(caption)
+            .children("a")
+            .remove()
+            .text();
+        $("<span>")
+            .addClass("name")
+            .text(name)
+            .prependTo(caption);
+
+
+        const image = $(profile).children("img");
+        const link = $(profile)
+            .children("figcaption")
+            .children("a");
+        $(image).on("click", () => $(clone).appendTo(createModal("profile")));
+        $(link).on("click", () => $(clone).appendTo(createModal("profile")));
+    }
+
     for (const brand of $(".brands a")) {
         const clone = brand.cloneNode(true);
         const description = $(clone)
