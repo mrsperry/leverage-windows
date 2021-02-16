@@ -34,20 +34,33 @@
             </ul>
         </nav>
         <main>
-            <div id="carousel" class="carousel slide carousel-fade" data-interval="3000" data-ride="carousel">
+            <div class="m">
+                <h1>Leverage Windows</h1>
+                <ul>
+                    <li>Windows</li>
+                    <li>Doors</li>
+                    <li>Glazing</li>
+                    <li>Aluminum Work</li>
+                    <li>Stairs</li>
+                    <li>Railings</li>
+                </ul>
+            </div>
+            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
                     <li data-target="#carousel" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img loading="lazy" src="src/assets/images/carousel/1.jpg" class="d-block w-100" alt="">
+                    <div class="carousel-item active" data-interval="999999">
+                        <video id="video" autoplay>
+                            <source src="src/assets/images/carousel/1.mov" type="video/webm">
+                        </video>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-interval="3000">
                         <img loading="lazy" src="src/assets/images/carousel/2.jpg" class="d-block w-100" alt="">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-interval="3000">
                         <img loading="lazy" src="src/assets/images/carousel/3.jpg" class="d-block w-100" alt="">
                     </div>
                 </div>
@@ -61,8 +74,6 @@
                 </a>
             </div>
         </main>
-        <footer>
-            <span>Copyright © 2020 Leverage Windows</span>
-        </footer>
+        <script src="src/js/index.js"></script>
     </body>
 </html>

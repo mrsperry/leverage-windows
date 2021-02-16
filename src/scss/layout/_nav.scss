@@ -3,7 +3,7 @@
 
 nav {
     @include mixins.flex(row, space-between);
-    padding: 1rem 3rem;
+    padding: 1rem 7.5rem;
 
     img {
         max-height: 3rem;

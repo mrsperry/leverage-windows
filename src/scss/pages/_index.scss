@@ -12,14 +12,78 @@
     }
 }
 
-.index main {
-    @include mixins.flex();
-    position: relative;
-    flex-grow: 1;
+.index {
+    color: white;
 
-    .carousel {
-        flex-grow: 1;
-        z-index: 0;
-        height: calc(100vh - 136px);
+    nav {
+        position: fixed;
+        z-index: 1;
+        font-size: 1.25rem;
+        color: white;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    main {
+        @include mixins.flex();
+        position: relative;
+
+        div.m {
+            position: fixed;
+            color: white;
+            @include mixins.flex(column);
+            z-index: 1;
+            width: 50%;
+        }
+
+        h1, h2 {
+            font-size: 4rem;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            display: flex;
+            font-size: 1.5rem;
+
+            li {
+                &:not(:last-of-type)::after {
+                    content: "●";
+                    padding-left: 1rem;
+                }
+
+                + li {
+                    padding-left: 1rem;
+                }
+            }
+        }
+
+        button {
+            @include mixins.flex();
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 0.5rem 3rem;
+            margin-top: 3rem;
+            border-radius: 0.25rem;
+
+            span {
+                margin-top: 3px;
+            }
+        }
+
+        .carousel {
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+
+            img {
+                filter: brightness(90%);
+            }
+        }
     }
 }
