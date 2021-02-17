@@ -29,7 +29,7 @@
         @include mixins.flex();
         position: relative;
 
-        div.m {
+        .heading {
             position: fixed;
             color: white;
             @include mixins.flex(column);
