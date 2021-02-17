@@ -23,7 +23,7 @@ const getTypeText = type => {
             const clone = $(template.get(0).content.cloneNode(true));
     
             clone.children("a").attr("href", "projects/" + project.id + ".html");
-            clone.find("img").attr("src", "src/assets/images/projects/" + project.id + "-1.jpg")
+            clone.find("img").attr("src", "src/assets/images/projects/" + project.id + "-1.jpg");
             clone.find(".title").text(convertID(project.id));
             clone.find(".type").text(getTypeText(project.type));
             clone.appendTo($(".projects"));
