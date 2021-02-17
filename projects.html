@@ -12,6 +12,8 @@
         <link rel="manifest" href="site.webmanifest">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="src/css/output.css">
+        <!-- jQuery -->
+        <script src="src/libraries/jquery-3.5.1.min.js"></script>
     </head>
     <body>
         <nav>
@@ -26,117 +28,22 @@
             </ul>
         </nav>
         <main class="projects">
-            <a href="projects/south-hibiscus-residence-1.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/south-hibiscus-residence-1.jpg">
-                    <figcaption>
-                        <span class="title">South Hibiscus Residence 1</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/south-hibiscus-residence-2.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/south-hibiscus-residence-2.jpg">
-                    <figcaption>
-                        <span class="title">South Hibiscus Residence 2</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/sheridan-residence.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/sheridan-residence-1.jpg">
-                    <figcaption>
-                        <span class="title">Sheridan Residence</span>
-                        <span class="type">Traditional / Mediterranean</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/south-ocean-project.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/south-ocean-project-1.jpg">
-                    <figcaption>
-                        <span class="title">South Ocean Project</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/brickell-estate.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/brickell-estate-1.jpg">
-                    <figcaption>
-                        <span class="title">Brickell Estate</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/north-hibiscus-residence.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/north-hibiscus-residence-1.jpg">
-                    <figcaption>
-                        <span class="title">North Hibiscus Residence</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/southwest-ranches-estate.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/southwest-ranches-residence-1.jpg">
-                    <figcaption>
-                        <span class="title">Southwest Ranches Estate</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/bonita-residence.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/bonita-residence-1.jpg">
-                    <figcaption>
-                        <span class="title">Bonita Residence</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/miami-shores.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/miami-shores-1.jpg">
-                    <figcaption>
-                        <span class="title">Miami Shores</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/79-hibiscus.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/79-hibiscus-1.jpg">
-                    <figcaption>
-                        <span class="title">79 Hibiscus</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/south-venetian-residence.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/south-venetian-residence-1.jpg">
-                    <figcaption>
-                        <span class="title">South Venetian Residence</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="projects/isle-of-palm-residence.html">
-                <figure>
-                    <img loading="lazy" src="src/assets/images/projects/isle-of-palm-residence-1.jpg">
-                    <figcaption>
-                        <span class="title">Isle of Palm Residence</span>
-                        <span class="type">Contemporary / Modern</span>
-                    </figcaption>
-                </figure>
-            </a>
+            <noscript>You must enable Javascript to view this page.</noscript>
+            <template id="project-template">
+                <a>
+                    <figure>
+                        <img loading="lazy">
+                        <figcaption>
+                            <span class="title"></span>
+                            <span class="type"></span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </template>
         </main>
         <footer>
             <span>Copyright © 2020 Leverage Windows</span>
         </footer>
+        <script src="src/js/projects.js"></script>
     </body>
 </html>

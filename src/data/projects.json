@@ -1,0 +1,50 @@
+[
+    {
+        "id": "south-hibiscus-residence-1",
+        "type": 1
+    },
+    {
+        "id": "south-hibiscus-residence-2",
+        "type": 1
+    },
+    {
+        "id": "sheridan-residence",
+        "type": 2
+    },
+    {
+        "id": "south-ocean-project",
+        "type": 1
+    },
+    {
+        "id": "brickell-estate",
+        "type": 1
+    },
+    {
+        "id": "north-hibiscus-residence",
+        "type": 1
+    },
+    {
+        "id": "southwest-ranches-estate",
+        "type": 1
+    },
+    {
+        "id": "bonita-residence",
+        "type": 1
+    },
+    {
+        "id": "miami-shores",
+        "type": 1
+    },
+    {
+        "id": "79-hibiscus",
+        "type": 1
+    },
+    {
+        "id": "south-venetian-residence",
+        "type": 1
+    },
+    {
+        "id": "isle-of-palm-residence",
+        "type": 1
+    }
+]
